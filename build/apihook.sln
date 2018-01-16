@@ -5,49 +5,47 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database Generator", "Database Generator", "{C595CD5F-42AE-42E8-802B-B9505D6A6B61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{02D11E86-6B69-449C-9F6C-617B9F94548C}"
-	ProjectSection(SolutionItems) = preProject
-		..\CHANGELOG = ..\CHANGELOG
-		version.ver = version.ver
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support Libraries", "Support Libraries", "{815CF81E-C87E-4074-8528-BB307A4D39E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc. Utilities", "Misc. Utilities", "{BBBE0AE4-533B-4F05-AC0F-BC8021B12A0C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpyMgrLib", "Engine\SpyMgr\SpyMgrLib.vcxproj", "{EBA4EC62-11CD-48FB-91B8-C3C85E4DD280}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpyMgrLib", "..\Source\Engine\SpyMgr\SpyMgrLib.vcxproj", "{EBA4EC62-11CD-48FB-91B8-C3C85E4DD280}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E} = {B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}
 		{BF4BA8BE-12DC-4D9F-9939-1505A451E293} = {BF4BA8BE-12DC-4D9F-9939-1505A451E293}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SqLiteLib", "SupportLibs\SqLite\SqLiteLib.vcxproj", "{C5233517-25FB-4301-86C2-C03C6EA41DA5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SqLiteLib", "..\Source\SupportLibs\SqLite\SqLiteLib.vcxproj", "{C5233517-25FB-4301-86C2-C03C6EA41DA5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agent", "Engine\Agent\Agent.vcxproj", "{A09AC76F-D3F4-4592-BBFF-546371E585A3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agent", "..\Source\Engine\Agent\Agent.vcxproj", "{A09AC76F-D3F4-4592-BBFF-546371E585A3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lz4Lib", "SupportLibs\Lz4\Lz4Lib.vcxproj", "{BF4BA8BE-12DC-4D9F-9939-1505A451E293}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lz4Lib", "..\Source\SupportLibs\Lz4\Lz4Lib.vcxproj", "{BF4BA8BE-12DC-4D9F-9939-1505A451E293}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviareCOM", "Engine\DeviareCOM\DeviareCOM.vcxproj", "{0AED07DA-557E-4A0F-A3E5-089AB50840FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviareCOM", "..\Source\Engine\DeviareCOM\DeviareCOM.vcxproj", "{0AED07DA-557E-4A0F-A3E5-089AB50840FB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeaderFix", "Database\HeaderFix\HeaderFix.vcxproj", "{BA3DBD3F-1403-4140-82D7-F68A4D9540B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeaderFix", "..\Source\Database\HeaderFix\HeaderFix.vcxproj", "{BA3DBD3F-1403-4140-82D7-F68A4D9540B1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbGenerator", "Database\Generator\DbGenerator.vcxproj", "{C03360D2-560B-442E-B44E-D0615A7AD426}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbGenerator", "..\Source\Database\Generator\DbGenerator.vcxproj", "{C03360D2-560B-442E-B44E-D0615A7AD426}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "File2Inc", "MiscUtils\File2Inc\File2Inc.vcxproj", "{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "File2Inc", "..\Source\MiscUtils\File2Inc\File2Inc.vcxproj", "{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tlb2H", "Database\Tlb2H\Tlb2H.vcxproj", "{E9957503-B1E0-4E1B-A027-6E304E644CF3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tlb2H", "..\Source\Database\Tlb2H\Tlb2H.vcxproj", "{E9957503-B1E0-4E1B-A027-6E304E644CF3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BF4BA8BE-12DC-4D9F-9939-1505A451E293} = {BF4BA8BE-12DC-4D9F-9939-1505A451E293}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbMerge", "Database\DbMerge\DbMerge.vcxproj", "{64249CFD-06D5-4A5A-813F-0D467485838C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbMerge", "..\Source\Database\DbMerge\DbMerge.vcxproj", "{64249CFD-06D5-4A5A-813F-0D467485838C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{F24E81D7-2D1A-4CCC-9966-CD3068BAC833}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NktHookLib_2013", "..\Externals\DeviareInProc\NktHookLib\NktHookLib_2013.vcxproj", "{9775108B-98E9-4458-B7F0-4E628706272E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NktHookLib", "..\Source\DeviareInProc\NktHookLib\NktHookLib.vcxproj", "{9775108B-98E9-4458-B7F0-4E628706272E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Obj2Inc", "..\Externals\DeviareInProc\Obj2Inc\Obj2Inc_2013.vcxproj", "{E36F841B-7542-4C90-A9B6-7FC53B533A14}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Obj2Inc", "..\Source\DeviareInProc\Obj2Inc\Obj2Inc.vcxproj", "{E36F841B-7542-4C90-A9B6-7FC53B533A14}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CTest", "..\Samples\C\Test\CTest.vcxproj", "{209BC46A-7722-4623-A55A-F5FD2A9F6663}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CTest", "..\Source\Samples\Test\CTest.vcxproj", "{209BC46A-7722-4623-A55A-F5FD2A9F6663}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{E4A86F11-E54B-49BE-AC3D-78431C5D33AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -174,5 +172,6 @@ Global
 		{64249CFD-06D5-4A5A-813F-0D467485838C} = {C595CD5F-42AE-42E8-802B-B9505D6A6B61}
 		{9775108B-98E9-4458-B7F0-4E628706272E} = {F24E81D7-2D1A-4CCC-9966-CD3068BAC833}
 		{E36F841B-7542-4C90-A9B6-7FC53B533A14} = {F24E81D7-2D1A-4CCC-9966-CD3068BAC833}
+		{209BC46A-7722-4623-A55A-F5FD2A9F6663} = {E4A86F11-E54B-49BE-AC3D-78431C5D33AA}
 	EndGlobalSection
 EndGlobal
