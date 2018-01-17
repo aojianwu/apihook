@@ -35,9 +35,13 @@
 #include "EngineTest.h"
 
 #if defined _M_IX86
-  #import "../../../bin/DeviareCOM.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+#if defined DEBUG
+  #import "../../../build/bin/Debug/DeviareCOM.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+#else
+#import "../../../build/bin/Release/DeviareCOM.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+#endif
 #elif defined _M_X64
-  #import "../../../bin/DeviareCOM64.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+  #import "../../../build/bin/DeviareCOM64.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
 #else
   #error Unsupported platform
 #endif

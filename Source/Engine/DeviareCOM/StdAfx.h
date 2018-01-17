@@ -75,21 +75,11 @@
 //-----------------------------------------------------------
 
 #if defined _M_IX86
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib_Debug.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\SpyMgrLib_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\SpyMgrLib.lib")
-  #endif //_DEBUG
+    #pragma comment(lib, "Lz4Lib.lib")
+    #pragma comment(lib, "SpyMgrLib.lib")
 #elif defined _M_X64
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64_Debug.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\SpyMgrLib64_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\SpyMgrLib64.lib")
-  #endif //_DEBUG
+    #pragma comment(lib, "Lz4Lib64.lib")
+    #pragma comment(lib, "SpyMgrLib64.lib")
 #else
   #error Unsupported platform
 #endif

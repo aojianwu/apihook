@@ -44,21 +44,12 @@
 //-----------------------------------------------------------
 
 #if defined _M_IX86
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\SqLiteLib_Debug.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\SqLiteLib.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib.lib")
-  #endif //_DEBUG
+
+    #pragma comment(lib, "SqLiteLib.lib")
+    #pragma comment(lib, "Lz4Lib.lib")
 #elif defined _M_X64
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\SqLiteLib64_Debug.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\SqLiteLib64.lib")
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64.lib")
-  #endif //_DEBUG
+    #pragma comment(lib, "SqLiteLib64.lib")
+    #pragma comment(lib, "Lz4Lib64.lib")
 #else
   #error Unsupported platform
 #endif

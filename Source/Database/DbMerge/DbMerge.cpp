@@ -33,17 +33,9 @@
 //-----------------------------------------------------------
 
 #if defined _M_IX86
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib.lib")
-  #endif //_DEBUG
+    #pragma comment(lib, "Lz4Lib.lib")
 #elif defined _M_X64
-  #ifdef _DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64_Debug.lib")
-  #else //_DEBUG
-    #pragma comment(lib, "..\\..\\..\\Libs\\Lz4Lib64.lib")
-  #endif //_DEBUG
+    #pragma comment(lib, "Lz4Lib64.lib")
 #else
   #error Unsupported platform
 #endif

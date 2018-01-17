@@ -6,19 +6,21 @@ IF /I [%1] == [debug] (
     SET __Config=Debug
 )
 
-IF NOT "%VS150COMNTOOLS%" == "" GOTO do_process
 
-IF NOT EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat" (
-    ECHO Visual Studio 2017 not found on this computer
+IF NOT EXIST "%VS120COMNTOOLS%..\..\VC\vcvarsall.bat" (
+    ECHO Visual Studio 2013 not found on this computer
     PAUSE
     GOTO end
 )
 
-CALL "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"
+
+call "%VS120COMNTOOLS%..\..\VC\vcvarsall.bat"
+
+
 
 :do_process
 
-DEVENV DvEngine.sln /rebuild "%__Config%|Win32"
+call DEVENV apihook.sln /rebuild "%__Config%|Win32"
 IF NOT %ERRORLEVEL% == 0 (
     ENDLOCAL
     ECHO Errors detected while compiling Deviare
@@ -26,7 +28,7 @@ IF NOT %ERRORLEVEL% == 0 (
     GOTO end
 )
 
-DEVENV DvEngine.sln /rebuild "%__Config%|x64"
+call DEVENV apihook.sln /rebuild "%__Config%|x64"
 IF NOT %ERRORLEVEL% == 0 (
     ENDLOCAL
     ECHO Errors detected while compiling Deviare

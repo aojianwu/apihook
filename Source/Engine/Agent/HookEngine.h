@@ -34,7 +34,7 @@
 #include "..\..\Common\TransportCommon.h"
 #include "..\..\Common\ProcessMemory.h"
 #include "..\..\Common\FunctionParamsCache.h"
-#include "..\..\..\Externals\DeviareInProc\Include\NktHookLib.h"
+#include "NktHookLib.h"
 #include "TlsData.h"
 #include "HookEngineCallDataEntry.h"
 #include "HookEngineInternals.h"

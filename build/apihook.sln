@@ -28,7 +28,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeaderFix", "..\Source\Data
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbGenerator", "..\Source\Database\Generator\DbGenerator.vcxproj", "{C03360D2-560B-442E-B44E-D0615A7AD426}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "File2Inc", "..\Source\MiscUtils\File2Inc\File2Inc.vcxproj", "{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "File2Inc", "MiscUtils\File2Inc\File2Inc.vcxproj", "{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tlb2H", "..\Source\Database\Tlb2H\Tlb2H.vcxproj", "{E9957503-B1E0-4E1B-A027-6E304E644CF3}"
 	ProjectSection(ProjectDependencies) = postProject

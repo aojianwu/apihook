@@ -67,22 +67,22 @@
     <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\..\Libs\</OutDir>
-    <IntDir>..\..\..\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>$(ProjectName)_Debug</TargetName>
+    <OutDir>$(SolutionDir)lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\..\Libs\</OutDir>
-    <IntDir>..\..\..\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>$(ProjectName)64_Debug</TargetName>
+    <OutDir>$(SolutionDir)lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\..\Libs\</OutDir>
-    <IntDir>..\..\..\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\..\..\Libs\</OutDir>
-    <IntDir>..\..\..\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -96,6 +96,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Source\DeviareInProc\Include;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib />
     <Lib />
@@ -114,6 +115,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Source\DeviareInProc\Include;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib />
     <Lib />
@@ -129,6 +131,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Source\DeviareInProc\Include;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib />
     <Lib />
@@ -147,6 +150,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Source\DeviareInProc\Include;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib />
     <Lib />
@@ -252,7 +256,7 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(VC_ExecutablePath_x86_x64)\ML64.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX64 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Debug\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX64 /type:obj
 GOTO end
 :bad_compile
 EXIT 1
@@ -264,7 +268,7 @@ EXIT 1
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(VC_ExecutablePath_x86_x64)\ML64.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX64 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Release\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX64 /type:obj
 GOTO end
 :bad_compile
 EXIT 1
@@ -281,7 +285,7 @@ EXIT 1
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(VC_ExecutablePath_x86_x86)\ML.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Debug\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
 GOTO end
 :bad_compile
 EXIT 1
@@ -292,7 +296,7 @@ EXIT 1
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(VC_ExecutablePath_x86_x86)\ML.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Release\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
 GOTO end
 :bad_compile
 EXIT 1
@@ -303,7 +307,7 @@ EXIT 1
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(VC_ExecutablePath_x86_x86)\ML.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Debug\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
 GOTO end
 :bad_compile
 EXIT 1
@@ -314,7 +318,7 @@ EXIT 1
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling assembler code...</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(VC_ExecutablePath_x86_x86)\ML.EXE" /c /nologo /Fo"%(RootDir)%(Directory)\%(Filename).obj" "%(FullPath)"
 IF ERRORLEVEL 1 goto bad_compile
-"$(ProjectDir)..\..\MiscUtils\File2Inc\bin\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
+"$(ProjectDir)..\..\..\build\bin\Release\File2Inc.exe" "%(RootDir)%(Directory)\%(Filename).obj" "%(RootDir)%(Directory)\%(Filename).inl" /var:aInjectorX86 /type:obj
 GOTO end
 :bad_compile
 EXIT 1

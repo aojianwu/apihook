@@ -31,7 +31,7 @@
 #include "DynamicAPIs.h"
 #include "NtInternals.h"
 #ifdef AGENTDLL
- #include "..\..\Externals\DeviareInProc\Include\NktHookLib.h"
+ #include "NktHookLib.h"
 #endif //AGENTDLL
 
 //-----------------------------------------------------------
