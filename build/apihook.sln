@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc. Utilities", "Misc. Ut
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpyMgrLib", "..\Source\Engine\SpyMgr\SpyMgrLib.vcxproj", "{EBA4EC62-11CD-48FB-91B8-C3C85E4DD280}"
 	ProjectSection(ProjectDependencies) = postProject
+		{E36F841B-7542-4C90-A9B6-7FC53B533A14} = {E36F841B-7542-4C90-A9B6-7FC53B533A14}
+		{9775108B-98E9-4458-B7F0-4E628706272E} = {9775108B-98E9-4458-B7F0-4E628706272E}
 		{B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E} = {B705E0BA-56FF-4BA7-847B-0FE0DA2DBA8E}
 		{BF4BA8BE-12DC-4D9F-9939-1505A451E293} = {BF4BA8BE-12DC-4D9F-9939-1505A451E293}
 	EndProjectSection
@@ -19,6 +21,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SqLiteLib", "..\Source\SupportLibs\SqLite\SqLiteLib.vcxproj", "{C5233517-25FB-4301-86C2-C03C6EA41DA5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agent", "..\Source\Engine\Agent\Agent.vcxproj", "{A09AC76F-D3F4-4592-BBFF-546371E585A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9775108B-98E9-4458-B7F0-4E628706272E} = {9775108B-98E9-4458-B7F0-4E628706272E}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lz4Lib", "..\Source\SupportLibs\Lz4\Lz4Lib.vcxproj", "{BF4BA8BE-12DC-4D9F-9939-1505A451E293}"
 EndProject
@@ -40,10 +45,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{F24E81D7-2D1A-4CCC-9966-CD3068BAC833}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NktHookLib", "..\Source\DeviareInProc\NktHookLib\NktHookLib.vcxproj", "{9775108B-98E9-4458-B7F0-4E628706272E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E36F841B-7542-4C90-A9B6-7FC53B533A14} = {E36F841B-7542-4C90-A9B6-7FC53B533A14}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Obj2Inc", "..\Source\DeviareInProc\Obj2Inc\Obj2Inc.vcxproj", "{E36F841B-7542-4C90-A9B6-7FC53B533A14}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CTest", "..\Source\Samples\Test\CTest.vcxproj", "{209BC46A-7722-4623-A55A-F5FD2A9F6663}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AED07DA-557E-4A0F-A3E5-089AB50840FB} = {0AED07DA-557E-4A0F-A3E5-089AB50840FB}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{E4A86F11-E54B-49BE-AC3D-78431C5D33AA}"
 EndProject

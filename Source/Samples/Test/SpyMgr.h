@@ -41,7 +41,12 @@
 #import "../../../build/bin/Release/DeviareCOM.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
 #endif
 #elif defined _M_X64
-  #import "../../../build/bin/DeviareCOM64.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+
+#if defined DEBUG
+#import "../../../build/bin/Debug/DeviareCOM64.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+#else
+#import "../../../build/bin/Release/DeviareCOM64.dll" raw_interfaces_only, named_guids, raw_dispinterfaces, auto_rename
+#endif
 #else
   #error Unsupported platform
 #endif

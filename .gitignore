@@ -45,3 +45,15 @@ Source/Engine/DeviareCOM/DeviareCOM_i.h
 Source/Engine/DeviareCOM/DeviareCOM_p.c
 build/bin/Debug/ctest.hooks.xml
 *.tlb
+/Source/Engine/DeviareCOM/DeviareCOM64_i.h
+/Source/Engine/DeviareCOM/DeviareCOM64_p.c
+/Source/Engine/DeviareCOM/DeviareCOM64_i.c
+*.xml
+*.ilk
+*.exp
+/build/obj
+Source/Engine/DeviareCOM/DeviareCOM64_i.c
+Source/Engine/DeviareCOM/DeviareCOM64_i.h
+Source/Engine/DeviareCOM/DeviareCOM64_p.c
+Source/Engine/SpyMgr/Asm/Injector_x64.inl
+Source/Engine/SpyMgr/Asm/Injector_x86.inl
