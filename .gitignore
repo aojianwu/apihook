@@ -62,3 +62,4 @@ Source/Engine/SpyMgr/Asm/Injector_x86.inl
 *.user
 Source/Samples/Test/CTest.vcxproj.user
 *.user
+/Source/Samples/Test/*.user

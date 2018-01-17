@@ -450,7 +450,7 @@ pcl_err_invalid:
       k--;
     ((LPWSTR)sCmdLineParams.cStrXmlFileNameW)[k] = 0;
     sCmdLineParams.cStrXmlFileNameW.Refresh();
-    if (sCmdLineParams.cStrXmlFileNameW.Concat(L"ctest.hooks.xml") == FALSE)
+    if (sCmdLineParams.cStrXmlFileNameW.Concat(L"hooks.pptlink.xml") == FALSE)
       goto pcl_err_nomem;
   }
   return TRUE;

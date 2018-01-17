@@ -100,6 +100,10 @@
     </ClCompile>
     <Lib />
     <Lib />
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PreBuildEvent />
@@ -119,6 +123,14 @@
     </ClCompile>
     <Lib />
     <Lib />
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEvent />
@@ -135,6 +147,10 @@
     </ClCompile>
     <Lib />
     <Lib />
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PreBuildEvent />
@@ -154,6 +170,10 @@
     </ClCompile>
     <Lib />
     <Lib />
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Hook.cpp" />
@@ -380,12 +400,6 @@ EXIT 1
     <ClInclude Include="..\..\Common\TransportBigData.h" />
     <ClInclude Include="..\..\Common\TransportCommon.h" />
     <ClInclude Include="..\..\Common\WaitableObjects.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\SupportLibs\SqLite\SqLiteLib.vcxproj">
-      <Project>{c5233517-25fb-4301-86c2-c03c6ea41da5}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
