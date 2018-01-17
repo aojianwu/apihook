@@ -29,6 +29,14 @@
 
 #include "TestDll.h"
 
+#if defined _M_IX86
+#pragma comment(lib, "NktHookLib.lib")
+#elif defined _M_X64
+#pragma comment(lib, "NktHookLib64.lib")
+#else
+#error Unsupported platform
+#endif
+
 //-----------------------------------------------------------
 
 extern "C" BOOL APIENTRY DllMain(__in HMODULE hModule, __in DWORD ulReasonForCall, __in LPVOID lpReserved)

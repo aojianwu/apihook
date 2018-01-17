@@ -323,13 +323,7 @@
     <CustomBuild Include="DeviareCOM_i.h">
       <Filter>Generated Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="BuildPrimaryInterop\build.bat">
-      <Filter>Primary Interop</Filter>
-    </CustomBuild>
     <CustomBuild Include="BuildPrimaryInterop\idl_size_t.h">
-      <Filter>Primary Interop</Filter>
-    </CustomBuild>
-    <CustomBuild Include="BuildPrimaryInterop\keypair.snk">
       <Filter>Primary Interop</Filter>
     </CustomBuild>
     <CustomBuild Include="RegFreeCOM_Manifest_Files\DeviareCOM.X.manifest">

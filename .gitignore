@@ -57,3 +57,8 @@ Source/Engine/DeviareCOM/DeviareCOM64_i.h
 Source/Engine/DeviareCOM/DeviareCOM64_p.c
 Source/Engine/SpyMgr/Asm/Injector_x64.inl
 Source/Engine/SpyMgr/Asm/Injector_x86.inl
+*.user
+*.user
+*.user
+Source/Samples/Test/CTest.vcxproj.user
+*.user

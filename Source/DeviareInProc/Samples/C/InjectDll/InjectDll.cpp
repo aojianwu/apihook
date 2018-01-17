@@ -34,6 +34,14 @@
 #include <stdlib.h>
 #include <NktHookLib.h>
 
+#if defined _M_IX86
+#pragma comment(lib, "NktHookLib.lib")
+#elif defined _M_X64
+#pragma comment(lib, "NktHookLib64.lib")
+#else
+#error Unsupported platform
+#endif
+
 //-----------------------------------------------------------
 
 static LPSTR ToAnsi(__in_z LPCWSTR sW);

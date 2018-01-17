@@ -34,6 +34,14 @@
 
 #define DISALLOW_REENTRANCY
 
+#if defined _M_IX86
+#pragma comment(lib, "NktHookLib.lib")
+#elif defined _M_X64
+#pragma comment(lib, "NktHookLib64.lib")
+#else
+#error Unsupported platform
+#endif
+
 //-----------------------------------------------------------
 
 typedef int (WINAPI *lpfnMessageBoxW)(__in_opt HWND hWnd, __in_opt LPCWSTR lpText, __in_opt LPCWSTR lpCaption, __in UINT uType);
